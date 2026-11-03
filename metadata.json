@@ -1,0 +1,6 @@
+{
+  "name": "智慧城市综合治理平台",
+  "description": "智慧城市综合治理平台首页与管控中心，提供全域AI监控、车载移动巡检、违法违规事件预警研判、高发时段与各街道统计分析。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

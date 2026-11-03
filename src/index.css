@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Plus Jakarta Sans", sans-serif;
+    background-color: #060911;
+    color: #e2e8f0;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+}
+
+/* ========================================================
+   Modern Smart City Mission Control Design System
+   ======================================================== */
+
+/* Dark Tactical Titanium Command Card */
+.cmd-panel {
+  background: linear-gradient(180deg, rgba(13, 20, 36, 0.88) 0%, rgba(9, 14, 26, 0.94) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cyber corner notch accents */
+.cmd-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(56, 189, 248, 0.7);
+  border-right: 2px solid rgba(56, 189, 248, 0.7);
+  pointer-events: none;
+}
+
+.cmd-panel::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.4);
+  border-left: 2px solid rgba(56, 189, 248, 0.4);
+  pointer-events: none;
+}
+
+/* Light Mode Overrides when user switches to clean light theme */
+.theme-light .cmd-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.96) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+  color: #0f172a;
+}
+.theme-light .cmd-panel::after {
+  border-color: #3b82f6;
+}
+.theme-light .cmd-panel::before {
+  border-color: #93c5fd;
+}
+
+/* Radar Sweep Animation for GIS Digital Twin */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 8s linear infinite;
+}
+
+/* Luminous Pulse for Tactical Markers */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+
+/* Subtle Grid Dot Pattern Background */
+.bg-tactical-grid {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 12, 20, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
